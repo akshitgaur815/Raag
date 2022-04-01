@@ -3,7 +3,7 @@ from youtube_search import YoutubeSearch as YS
 from playsound import playsound as ps
 import threading
 
-store_loc = '/home/akshit/music/spot/'
+store_loc = '/home/akshit/Music/raag/'
 
 def remove_punc(test_str):
     punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
@@ -125,7 +125,7 @@ def play(names):
 
 if __name__ == '__main__':
     prompt = input("Search: ")
-    ids, names = search(prompt)
+    ids, names, _, _, _, _ = search(prompt)
 
     down(0, [ids[0]], [names[0]])
 
